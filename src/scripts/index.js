@@ -42,9 +42,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         ss.innerHTML = timeLeft.ss.toString();
 
-        mmLine.style.width = timeLeft.ss * 100 / 60 + '%';
+        mmLine.style.width = ((timeLeft.ss + timeLeft.ms / 1000) * 100 / 60).toFixed(1) + '%';
         ms.innerHTML = timeLeft.ms.toString();
-        ssLine.style.width = timeLeft.ms * 100 / 1000 + '%';
+        ssLine.style.width = (timeLeft.ms * 100 / 1000).toFixed(1) + '%';
+
         msLine.style.opacity = (timeLeft.ms % 2 ? 0 : 1).toString();
     }, 40);
 });

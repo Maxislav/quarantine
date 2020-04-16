@@ -68,7 +68,7 @@ text-align: center;
   background: red;
 
   &-mm{
-    transition: width 1s linear;
+    transition: width 0.01s linear;
   }&-ms{
     transition: opacity 0.1s linear;
   }
