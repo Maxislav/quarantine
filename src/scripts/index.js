@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const msLine = document.querySelector('.container .line-ms');
     //console.log(dd);
 
-    const dateStart = new Date(2020, 2, 12).getTime();
+    const dateStart = new Date(2020, 2, 11).getTime();
     setInterval(() => {
-        const dif = (new Date().getTime() - dateStart);
+        const dif = (new Date().getTime() + 3600 * 1000- dateStart);
         // console.log(secondsToDhms(dif));
         const timeLeft = secondsToDhms(dif);
         dd.innerHTML = timeLeft.dd.toString();
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 function secondsToDhms(ms) {
     ms = Number(ms);
-    var dd = Math.floor(ms / 1000 / (3600 * 24)) + 1;
-    var hh = Math.floor(ms / 1000 % (3600 * 24) / 3600) + 1;
+    var dd = Math.floor(ms / 1000 / (3600 * 24))  ;
+    var hh = Math.floor(ms / 1000 % (3600 * 24) / 3600) ;
     var mm = Math.floor(ms / 1000 % 3600 / 60);
     var ss = Math.floor(ms / 1000 % 60);
     var ms = Math.floor(ms % 1000);
